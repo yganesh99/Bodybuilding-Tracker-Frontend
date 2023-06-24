@@ -1,29 +1,31 @@
 import React from 'react';
-import { FormattedMessage } from 'react-intl';
+import { Link } from 'react-router-dom';
+import { Menu, Container } from 'semantic-ui-react';
 
-import A from './A';
-import Img from './Img';
-import NavBar from './NavBar';
-import HeaderLink from './HeaderLink';
-import Banner from './banner.jpg';
-import messages from './messages';
-
-function Header() {
+function Header ({menus}) {
   return (
-    <div>
-      <A href="https://www.reactboilerplate.com/">
-        <Img src={Banner} alt="react-boilerplate - Logo" />
-      </A>
-      <NavBar>
-        <HeaderLink to="/">
-          <FormattedMessage {...messages.home} />
-        </HeaderLink>
-        <HeaderLink to="/features">
-          <FormattedMessage {...messages.features} />
-        </HeaderLink>
-      </NavBar>
-    </div>
+    <Menu inverted fluid className='rounded-0'>
+      <Container fluid className='container-fluid'>
+        <Menu.Item as={Link} to="/" header>
+          Bodybuilding for Dummies
+        </Menu.Item>
+        <Menu.Menu position="right">
+          <Menu.Item as={Link} to="/workouts">
+            Workouts
+          </Menu.Item>
+          <Menu.Item as={Link} to="/nutrition">
+            Nutrition
+          </Menu.Item>
+          <Menu.Item as={Link} to="/progress">
+            Progress
+          </Menu.Item>
+          <Menu.Item as={Link} to="/settings">
+            Settings
+          </Menu.Item>
+        </Menu.Menu>
+      </Container>
+    </Menu>
   );
-}
+};
 
 export default Header;

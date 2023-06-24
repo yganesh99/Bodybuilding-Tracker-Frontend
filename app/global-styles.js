@@ -17,14 +17,13 @@ const GlobalStyle = createGlobalStyle`
   }
 
   #app {
-    background-color: #fafafa;
     min-height: 100%;
     min-width: 100%;
   }
 
   p,
-  label {
-    font-family: Georgia, Times, 'Times New Roman', serif;
+  label{
+    font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif;
     line-height: 1.5em;
   }
 `;
