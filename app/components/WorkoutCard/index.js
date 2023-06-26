@@ -1,13 +1,15 @@
 /**
  *
- * FeatureCard
+ * WorkoutCard
  *
  */
 
 import React from 'react';
 import { Image } from 'semantic-ui-react';
+// import PropTypes from 'prop-types';
+// import styled from 'styled-components';
 
-function FeatureCard({image, title, description, onClick}) {
+function WorkoutCard({image, title, description, onClick}) {
   return (
     <div className="ui card" onClick={onClick}>
       <a className="image">
@@ -21,8 +23,9 @@ function FeatureCard({image, title, description, onClick}) {
       </div>
     </div>
   );
+
 };
 
-FeatureCard.propTypes = {};
+WorkoutCard.propTypes = {};
 
-export default FeatureCard;
+export default WorkoutCard;

@@ -19,6 +19,7 @@ import 'sanitize.css/sanitize.css';
 import 'semantic-ui-css/semantic.min.css';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './styles.css';
 
 // Import root app
 import App from 'containers/App';
